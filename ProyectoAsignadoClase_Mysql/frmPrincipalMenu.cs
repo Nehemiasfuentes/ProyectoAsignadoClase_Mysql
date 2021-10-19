@@ -31,5 +31,12 @@ namespace ProyectoAsignadoClase_Mysql
 
             frmnewmedico.Show();
         }
+
+        private void frmPrincipalMenu_Load(object sender, EventArgs e)
+        {
+            frmNewMedico frmnewmedico = new frmNewMedico();
+
+            frmnewmedico.Show();
+        }
     }
 }

@@ -16,7 +16,7 @@ namespace ProyectoAsignadoClase_Mysql
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPrincipalMenu());
+            Application.Run(new frmNewMedico());
         }
     }
 }

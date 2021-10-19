@@ -29,6 +29,7 @@ namespace ProyectoAsignadoClase_Mysql
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,7 +44,12 @@ namespace ProyectoAsignadoClase_Mysql
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.dataGridViewInfo = new System.Windows.Forms.DataGridView();
+            this.actions = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.edit = new System.Windows.Forms.ToolStripMenuItem();
+            this.delete = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnEditar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInfo)).BeginInit();
+            this.actions.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -116,7 +122,7 @@ namespace ProyectoAsignadoClase_Mysql
             // 
             this.textBoxNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNombre.Location = new System.Drawing.Point(119, 86);
-            this.textBoxNombre.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(195, 26);
             this.textBoxNombre.TabIndex = 6;
@@ -125,7 +131,7 @@ namespace ProyectoAsignadoClase_Mysql
             // 
             this.textBoxApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxApellido.Location = new System.Drawing.Point(434, 86);
-            this.textBoxApellido.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxApellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxApellido.Name = "textBoxApellido";
             this.textBoxApellido.Size = new System.Drawing.Size(195, 26);
             this.textBoxApellido.TabIndex = 7;
@@ -134,7 +140,7 @@ namespace ProyectoAsignadoClase_Mysql
             // 
             this.textBoxEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxEspecialidad.Location = new System.Drawing.Point(152, 151);
-            this.textBoxEspecialidad.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxEspecialidad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxEspecialidad.Name = "textBoxEspecialidad";
             this.textBoxEspecialidad.Size = new System.Drawing.Size(195, 26);
             this.textBoxEspecialidad.TabIndex = 8;
@@ -143,7 +149,7 @@ namespace ProyectoAsignadoClase_Mysql
             // 
             this.textBoxTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTelefono.Location = new System.Drawing.Point(434, 154);
-            this.textBoxTelefono.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxTelefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxTelefono.Name = "textBoxTelefono";
             this.textBoxTelefono.Size = new System.Drawing.Size(195, 26);
             this.textBoxTelefono.TabIndex = 9;
@@ -152,7 +158,7 @@ namespace ProyectoAsignadoClase_Mysql
             // 
             this.textBoxDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxDireccion.Location = new System.Drawing.Point(136, 213);
-            this.textBoxDireccion.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxDireccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxDireccion.Name = "textBoxDireccion";
             this.textBoxDireccion.Size = new System.Drawing.Size(492, 26);
             this.textBoxDireccion.TabIndex = 10;
@@ -162,8 +168,8 @@ namespace ProyectoAsignadoClase_Mysql
             this.btnAgregar.AutoSize = true;
             this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(152, 271);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgregar.Location = new System.Drawing.Point(139, 271);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(116, 39);
             this.btnAgregar.TabIndex = 11;
@@ -177,7 +183,7 @@ namespace ProyectoAsignadoClase_Mysql
             this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Location = new System.Drawing.Point(434, 271);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(86, 39);
             this.btnSalir.TabIndex = 12;
@@ -188,19 +194,57 @@ namespace ProyectoAsignadoClase_Mysql
             // dataGridViewInfo
             // 
             this.dataGridViewInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewInfo.ContextMenuStrip = this.actions;
             this.dataGridViewInfo.Location = new System.Drawing.Point(67, 343);
-            this.dataGridViewInfo.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewInfo.Name = "dataGridViewInfo";
             this.dataGridViewInfo.RowHeadersWidth = 51;
             this.dataGridViewInfo.RowTemplate.Height = 24;
             this.dataGridViewInfo.Size = new System.Drawing.Size(549, 219);
             this.dataGridViewInfo.TabIndex = 13;
+            this.dataGridViewInfo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewInfo_CellContentClick);
+            // 
+            // actions
+            // 
+            this.actions.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.actions.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.edit,
+            this.delete});
+            this.actions.Name = "actions";
+            this.actions.Size = new System.Drawing.Size(118, 48);
+            // 
+            // edit
+            // 
+            this.edit.Name = "edit";
+            this.edit.Size = new System.Drawing.Size(117, 22);
+            this.edit.Text = "Editar";
+            this.edit.Click += new System.EventHandler(this.edit_Click);
+            // 
+            // delete
+            // 
+            this.delete.Name = "delete";
+            this.delete.Size = new System.Drawing.Size(117, 22);
+            this.delete.Text = "Eliminar";
+            this.delete.Click += new System.EventHandler(this.delete_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.AutoSize = true;
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Location = new System.Drawing.Point(276, 271);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(136, 39);
+            this.btnEditar.TabIndex = 14;
+            this.btnEditar.Text = "Actualizar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // frmNewMedico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(664, 573);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.dataGridViewInfo);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnAgregar);
@@ -215,12 +259,13 @@ namespace ProyectoAsignadoClase_Mysql
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmNewMedico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Medico";
             this.Load += new System.EventHandler(this.frmNewMedico_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInfo)).EndInit();
+            this.actions.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,5 +287,9 @@ namespace ProyectoAsignadoClase_Mysql
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.DataGridView dataGridViewInfo;
+        private System.Windows.Forms.ContextMenuStrip actions;
+        private System.Windows.Forms.ToolStripMenuItem edit;
+        private System.Windows.Forms.ToolStripMenuItem delete;
+        private System.Windows.Forms.Button btnEditar;
     }
 }
